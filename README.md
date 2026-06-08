@@ -44,7 +44,7 @@ Shopee Raw Data
 Automatic Data Ingestion (Python)
       │
       ▼
-Centralized Database
+Centralized Database (Postgresql)
       │
       ▼
 Data Modeling (Dim / Fact Tables)
