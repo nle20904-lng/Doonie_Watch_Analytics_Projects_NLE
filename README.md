@@ -61,7 +61,31 @@ I was engaged as a **Freelance Data Consultant** across two domains:
 | 🛒 **Traffic & Conversion** | Maximize marketing ROI | Views, CTR, Conversion Rate, Brand Performance Matrix |
 | ⚠️ **Risk Management** | Reduce operational risk | Cancellation Rate, Return Rate, Risk by Payment Method & City |
 
-> 📸 **See Section 2.5 below for detailed dashboard mockups.**
+---
+
+### Dashboard Mockups & Output
+
+**🔗 Power BI Report:** *(link)*
+
+Below are detailed mockups of each dashboard with their key metrics and layout.
+
+---
+
+### P&L Tracking
+
+Tracks revenue, costs, expenses, and profit performance to evaluate overall business profitability and support margin optimization decisions.
+
+### Customer Acquisition & Retention
+
+Tracks new and returning customers, retention rate, and customer growth to evaluate customer loyalty and acquisition efficiency.
+
+### Traffic & Conversion Performance
+
+Tracks traffic, clicks, add-to-cart, and conversion rates to measure funnel performance and optimize marketing effectiveness.
+
+### Order Fulfillment Risk & Loss Management
+
+Tracks cancellation, return rates, and operational risks to identify revenue loss drivers and improve fulfillment quality.
 
 ---
 
@@ -257,147 +281,6 @@ call stg.prc_insert_fact_tables();
 | 9 | `fact_monthly_products_performance` | 1 row per month × brand × category × metric | Unpivots 5 metrics (views, clicks, exits, add-to-cart, orders) into narrow format for Power BI |
 | 10a | `fact_customer_monthly_metrics` | 1 row per month × customer × metric | 12 CTEs: monthly base → first purchase → purchase history → has_prior_purchase → lifetime → days since last order → final unpivot to 13 metric IDs |
 | 10b | `fact_monthly_risk_management` | 1 row per month × city × district × product × brand × category × payment method × metric | Spine of all combinations × 13 metrics; LEFT JOIN 13 aggregation CTEs (m1–m13) for total/completed/canceled/delivered orders + refund/return counts + GMV variants |
-
----
-
-### 2.5 Dashboard Mockups & Output
-
-**🔗 Power BI Report:** *(link)*
-
-Below are detailed mockups of each dashboard with their key metrics and layout.
-
----
-
-#### 📊 Dashboard 1 — P&L Tracking
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│  PROFIT AND LOSS TRACKING          [Year: 2026 ▼]  [Month: May ▼]              │
-├──────────────┬──────────────┬──────────────┬──────────────────────────────────┤
-│ Total Revenue│ Total Unit   │ Total        │ Net Profit                        │
-│  34,491,000  │ Cost         │ Expense      │  7,010,845                        │
-│              │  15,060,000  │  12,420,155  │  ▲ MoM +2.7%                     │
-│ ▲ MoM +17.4% │  GPM: 56.34% │ 2026: 52.92M │  2026 YTD: 35.4M                 │
-├──────────────┴──────────────┴──────────────┴──────────────────────────────────┤
-│                    Gross vs Net Margin (Line Chart)                             │
-│  60% ─────────────────────────────────────── 56.34% (Gross)                   │
-│  40%                                                                            │
-│  20% ─────────────────────────────────────── 20.33% (Net)                     │
-│       Jan      Feb      Mar      Apr      May                                  │
-├────────────────────────────────┬───────────────────────────────────────────────┤
-│  Monthly Performance (Bar)     │  Operating Expense Structure (Donut)          │
-│  44M ████                      │                                               │
-│  34M ████ ████ ████ ████ ████  │   Platform Fee  ████████████  80.69%          │
-│       Jan  Feb  Mar  Apr  May  │   Marketing Fee ██           12.69%           │
-│  ■ Revenue ■ Expense ■ Profit  │   Shipping      █             2.62%           │
-└────────────────────────────────┴───────────────────────────────────────────────┘
-Key Insight (Digital Marketing lens): Platform fees = 81% of opex.
-Every incremental ad spend has outsized margin impact — audit ROI before scaling.
-```
-
----
-
-#### 👥 Dashboard 2 — Customer Acquisition & Retention
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│  CUSTOMER ACQUISITION & RETENTION         [Year: 2026 ▼]  [Month: May ▼]      │
-├──────────────┬──────────────┬──────────────┬────────────────────────────────── ┤
-│ Total        │ New          │ Returning    │ Retention Rate                    │
-│ Customers    │ Customers    │ Customers    │  9.26%                            │
-│     108      │     98       │     10       │  Avg 2026: 4.45%                  │
-│              │ ▼ MoM -14%   │ ▲ MoM +233% │                                   │
-├──────────────┴──────────────┴──────────────┴──────────────────────────────────┤
-│   Monthly Customer Volume & Retention Rate Trend (Bar + Line)                  │
-│                                                      ●  9.26%                  │
-│   200 ████████████████████████████████████████  ●                              │
-│   100 ████████████████████████████████████████                                 │
-│        Jan      Feb      Mar      Apr      May                                  │
-│   ■ New Customers  ■ Returning  ─── Retention Rate                             │
-├────────────────────────────────┬───────────────────────────────────────────────┤
-│  City Breakdown (Table)        │  New vs Returning (Donut)                     │
-│  City             New  Return  │                                               │
-│  TP. Hồ Chí Minh   41    2    │         90.74% New                            │
-│  Tỉnh Đồng Nai     10    0    │       ○         9.26% Returning               │
-│  Thành phố Cần Thơ  4    2    │                                               │
-│  Tỉnh Vĩnh Long     4    0    │                                               │
-├────────────────────────────────┴───────────────────────────────────────────────┤
-│  MoM% New Customer Growth Rate (Line)                                          │
-│  +41.07%    ●                                                                  │
-│  +14.29% ●     ●  -5.56%                                                       │
-│  -15.52%●          ● -31.65%                                                   │
-│   Jan    Feb   Mar   Apr    May                                                 │
-└─────────────────────────────────────────────────────────────────────────────────┘
-Key Insight (Marketing lens): HCMC retention 4.65% — Cần Thơ at 33.33%.
-Returning customers in smaller cities are more loyal; test re-engagement campaigns there.
-```
-
----
-
-#### 🛒 Dashboard 3 — Traffic & Conversion Performance
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│  TRAFFIC & CONVERSION PERFORMANCE    [Casio][DW][Longines][Movado][No brand]   │
-├──────────────┬──────────────┬──────────────┬────────────────────────────────── ┤
-│   Views      │   Clicks     │  Add to Cart │  Completed Orders                 │
-│   153,062    │    7,067     │     887      │     111                           │
-│ ▼ MoM -8.2%  │ ▲ CTR +2.2% │ ▼ MoM -14.2% │ ▼ MoM -6.7%                      │
-│ Avg: 172,071 │ Avg: 7,601  │ Avg: 981    │  Avg: 119                          │
-├──────────────┴──────────────┴──────────────┴──────────────────────────────────┤
-│  Monthly Interaction Trends (Bar + Line)    │  Purchase Funnel (Horizontal Bar)│
-│                                              │                                  │
-│  10K ████                                   │  Clicks         7,067 ████████  │
-│   5K ████ ████ ████ ████ ████               │  Add to Cart      887 ██  12.6% │
-│        Jan  Feb  Mar  Apr  May              │  Completed Ord.   111 █   1.57% │
-│  ── Conversion Rate                         │                   1.6% overall  │
-├────────────────────────────────┬───────────────────────────────────────────────┤
-│  Traffic by Category (Treemap) │  Brand Matrix: CTR vs Conversion (Scatter)   │
-│  ┌──────────────┬──────────┐  │                                               │
-│  │ đồng hồ điện│ đồng hồ  │  │  3% │            ● Casio (bubble=volume)      │
-│  │ tử Casio    │ thời trang│  │  2% │  ● Pindows                             │
-│  │   53,058    │  Movado   │  │  1% │                    ● DW  ● Movado       │
-│  ├─────────────┤   37,655  │  │  0% │ ● Longines                             │
-│  │ DW  26,172  ├──────────┤  │     └────────────────────────────────────    │
-│  └─────────────┘  luxury   │  │      2%   3%   4%   5%   6%  (CTR →)        │
-│                   25,489   │  │  Dashed line = avg conversion benchmark      │
-└────────────────────────────┴───────────────────────────────────────────────────┘
-Key Insight (Marketing lens): DW has high CTR (~6%) but below-benchmark conversion.
-Ad budget for DW is attracting window-shoppers. A/B test price anchoring or bundle offers.
-```
-
----
-
-#### ⚠️ Dashboard 4 — Order Fulfillment Risk & Loss Management
-
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│  ORDER FULFILLMENT RISK & LOSS MANAGEMENT    [Casio][DW][Longines][Movado]     │
-├──────────────┬──────────────┬──────────────┬────────────────────────────────── ┤
-│ Canceled     │ Cancellation │ Returned     │ Returned Order Rate               │
-│  Orders: 32  │   Rate       │  Orders: 3   │     2.05%                         │
-│ ▼ MoM -21%   │   21.92%     │ ▼ MoM -50%   │  Avg 2026: 3.1%                   │
-│ 2026 YTD:213 │ Avg: 24.8%   │ 2026 YTD: 26 │                                   │
-├──────────────┴──────────────┴──────────────┴──────────────────────────────────┤
-│  Monthly Fulfillment Risk Trends (Line)     │  Risk by City (Bar + Line)       │
-│  30% ─────── cancellation ────────────      │                                  │
-│  20%                                        │  HCMC     ████████████  ~22%     │
-│  10%                                        │  Đ. Nai   ████         ~18%      │
-│   0% ─── returned ────────────────          │  Cần Thơ  ██           ~15%      │
-│       Jan    Feb   Mar   Apr   May          │  Cà Mau   ██████████   ~35% ⚠️  │
-│  ── Total Orders (dotted)                   │  Vĩnh Long████████████  ~33% ⚠️  │
-├────────────────────────────────┬───────────────────────────────────────────────┤
-│  Risk by Category (Bar)        │  Risk by Payment Method (Bar + Line)          │
-│                                │                                               │
-│  đh điện tử  ████████  ~23%   │  COD         ████████████  26.6% ⚠️           │
-│  đh thời trang ██████  ~18%   │  SPayLater   ████████      23.0%              │
-│  đh luxury   ████      ~12%   │  Bank-linked ██████        18.5%              │
-│  phụ kiện    ██        ~8%    │  ShopeePay   ████          14.3%              │
-│                                │  Google Pay  ██             9.1% ✅           │
-└────────────────────────────────┴───────────────────────────────────────────────┘
-Key Insight: COD = 26.6% cancellation rate vs Google Pay = 9.1%.
-Moving 20% of COD orders to prepaid would recover ~30 orders/month at current volume.
-```
 
 ---
 
