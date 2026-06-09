@@ -8,9 +8,9 @@
 ## 📌 Table of Contents
 
 1. [1. Background & Context](#1-background--context)
-2. [2. Process - Step by Step](#2-process---step-by-step)
+2. [2. Process — Step by Step](#2-process---step-by-step)
 3. [3. Insight Deep Dive](#3-insight-deep-dive)
-4. [4. Achievements (Jan 2025 - May 2026)](#4-achievements-jan-2025---may-2026)
+4. [4. Achievements (Jan 2025 → May 2026)](#4-achievements-jan-2025---may-2026)
 5. [5. Value Gained](#5-value-gained)
 
 ---
@@ -80,7 +80,7 @@ Full column definitions → [`data dictionary/data_dictionary_input.md`](./data%
 | `Order_all_YYYYMMDD.xlsx` | 62 | Orders, pricing, shipping, payment method, buyer address, platform fees |
 | `parentskudetail_YYYYMMDD.xlsx` | 40 | Views, clicks, CTR, conversion rates, add-to-cart, repeat purchase |
  
-### 2.3 DB Diagrams
+### 2.3 Output Data
  
 Full schema → [`data dictionary/data_dictionary_output.md`](./data%20dictionary/data_dictionary_output.md)
  
