@@ -126,6 +126,7 @@ This report recreates a standard P&L structure on a monthly basis, helping the t
 This report allows the team to immediately spot months where gross margin holds steady but net margin shrinks due to rising platform fees, or where revenue grows but net profit doesn't follow because operating costs exceed the threshold.
 
 ![image alt]()
+
 ---
 
 ## Customer Acquisition & Retention
