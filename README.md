@@ -38,6 +38,12 @@ Prior to this engagement, the shop owner had no structured data management. Thei
 
 ![image alt]()
 
+![image alt]()
+
+![image alt]()
+
+![image alt]()
+
 ### What the Owner Needed
 
 The owner wanted to move beyond reading native Shopee reports and gain:
@@ -205,52 +211,52 @@ Rather than simply reporting how many orders were canceled, this dashboard helps
 ## 3. Insight Deep Dive
  
 ### 🔴 COD is the #1 revenue leak
- 
-COD = ~70% of orders but 26.6% cancellation rate — 3× higher than prepaid. Concentrated in Cà Mau and Vĩnh Long (longer delivery windows).
- 
+
+COD = ~70% of orders but 26.6% cancellation rate — 3× higher than prepaid. 320 cancelled orders in May 2026. Return rate at 2.05% with upward MoM trend. Concentrated in Cà Mau and Vĩnh Long (longer delivery windows inflate cancellation risk).
+
 ![image alt]()
- 
-**Action →** Voucher campaign to migrate COD buyers to ShopeePay. Target: 70% → 55% COD share in 3 months.
- 
+
+**Action →** Voucher campaign to migrate COD buyers to ShopeePay. Target: 70% → 55% COD share in 3 months. Hold paid acquisition in Cà Mau/Vĩnh Long until COD verification is live.
+
 ---
- 
+
 ### 🟡 Platform fees are a margin ceiling
- 
-Platform fees = 80.7% of opex. Net margin compression tracks directly to ad spend decisions, not product issues.
- 
+
+Platform fees = 80.7% of opex. Total revenue 344.9M but net profit only 70.1M (~20% net margin). Margin compression tracks directly to ad spend decisions, not product issues.
+
 ![image alt]()
- 
-**Action →** Monthly campaign audit — pause below-avg CTR-to-conversion ads, reallocate to Casio.
- 
+
+**Action →** Monthly campaign audit — pause below-avg CTR-to-conversion ads, reallocate budget to Casio.
+
 ---
- 
-### 🟢 Casio and Pindows are the high-ROI brands
- 
-Both sit above the avg conversion line in the Brand CTR × Conversion Matrix. DW has high CTR but below-avg conversion (price/trust gap).
- 
+
+### 🟢 Casio has a military service–driven conversion cycle
+
+Casio (electronic watches) spikes in conversion rate in September (military service list announcement) and February (post-Tết / conscription intake). These are predictable demand triggers — budget needs to be prepared 4–6 weeks in advance. Conversely, April–August shows high views but weak conversion despite traffic volume.
+
 ![image alt]()
- 
-**Action →** +20–30% Casio ad budget. A/B test DW: price anchor vs bundle offer.
- 
+
+**Action →** Increase Casio ad budget 20–30% starting August and January. During April–August: reduce Casio bids, shift budget toward fashion watches to prepare for year-end peak.
+
 ---
- 
-### 🟡 Untapped geographic demand
- 
-Đồng Nai and Bình Dương show organic demand with zero marketing. HCMC concentration (~85% of customers) = single-market risk.
- 
+
+### 🔵 Fashion watches convert on gift seasons, weak mid-year
+
+Fashion watches (DW, Longines, Movado) only convert well during high gift-demand periods: year-end, Tết, Valentine's Day, Women's Day (8/3). April–August: high traffic but low conversion — users are browsing without purchase intent. DW specifically shows a CTR-to-conversion gap suggesting a price or trust issue.
+
 ![image alt]()
- 
-**Action →** Test paid acquisition in Đồng Nai first. Hold Cà Mau/Vĩnh Long until COD verification is live.
- 
+
+**Action →** April–August: switch to content nurturing (wishlists, reviews) instead of conversion ads. A/B test DW before year-end peak: price anchor vs bundle offer.
+
 ---
- 
-### 🔴 Retention is low but trending up
- 
-9.26% retention in May 2026 — but +233% MoM growth in returning customers. 2026 YTD avg = 4.45%.
- 
+
+### 🟢 Returning customers trending up; Đồng Nai is the next market to test
+
+Returning customers +233% MoM. Retention at 9.26% in May 2026 — up from 4.45% YTD avg. Customer volume spikes clearly around Tết, year-end holidays, and a mid-year repurchase window. HCMC concentration (~85% of customers) = single-market risk. Đồng Nai shows organic demand with zero marketing spend.
+
 ![image alt]()
- 
-**Action →** Post-purchase sequence: D+3 review request → D+30 accessory voucher → D+60 re-engagement.
+
+**Action →** Run a small paid acquisition test in Đồng Nai before year-end peak. Post-purchase sequence: D+3 review request → D+30 accessory voucher → D+60 re-engagement.
  
 ---
  
